@@ -1,31 +1,48 @@
 # .project metadata for bootc
 # Documentation: https://github.com/cncf/automation/tree/main/utilities/dot-project
 
-# TODO: Set slack_channels
 # TODO: Add package_managers if distributed via registries
 
 schema_version: "1.0.0"
 slug: "bootc"
 name: "bootc"
-description: "The bootc provides transactional, in-place operating system images and updates using OCI/Docker container images. This project applies the Docker container layering model to bootable host systems, using standard OCI/Docker containers as a transport and delivery format for base operating system updates."
+description: "The bootc project provides transactional, in-place operating system images and updates using OCI/Docker container images. This project applies the Docker container layering model to bootable host systems, using standard OCI/Docker containers as a transport and delivery format for base operating system updates."
 type: "project"
-project_lead: "cgwalters" # TODO: AUTO-DETECTED — please verify
-# TODO: Set CNCF Slack channel(s)
-# slack_channels:
-#   - name: "#bootc"
-#     primary: true
+project_lead:
+  - "cgwalters"
+  - "bootc-dev/maintainers"
+slack_channels:
+  - name: "#bootc-dev"
+    primary: true
+    workspace: "cncf"
+    link: "https://cloud-native.slack.com/archives/C08SKSQKG1L"
 
 maturity_log:
   - phase: "sandbox"
     date: "2025-01-21T00:00:00Z"
-    issue: "https://github.com/cncf/sandbox/issues/310" # TODO: AUTO-DETECTED — please verify
+    issue: "https://github.com/cncf/sandbox/issues/310"
 
 repositories:
   - "https://github.com/bootc-dev/bootc"
+  - "https://github.com/bootc-dev/bink"
+  - "https://github.com/bootc-dev/bcvk"
+  - "https://github.com/bootc-dev/infra"
+  - "https://github.com/bootc-dev/bootc-dev.github.io"
+  - "https://github.com/bootc-dev/bootc-operator"
+  - "https://github.com/bootc-dev/community"
+  - "https://github.com/bootc-dev/actions"
+  - "https://github.com/bootc-dev/canon-json-rs"
+  - "https://github.com/bootc-dev/jsonrpc-fdpass-go"
+  - "https://github.com/bootc-dev/jsonrpc-fdpass"
+  - "https://github.com/bootc-dev/agent-skills"
+  - "https://github.com/bootc-dev/homebrew-bcvk"
+  - "https://github.com/bootc-dev/ocidir-rs"
+  - "https://github.com/bootc-dev/containers-image-proxy-rs"
+  - "https://github.com/bootc-dev/linux-kernel-cmdline"
 
-website: "https://bootc-dev.github.io"
+website: "https://bootc.dev"
 
-artwork: "https://landscape.cncf.io/logos/bootc.svg"
+artwork: "https://github.com/cncf/artwork/tree/main/projects/bootc"
 
 adopters:
   path: "https://github.com/bootc-dev/bootc/blob/main/ADOPTERS.md"
@@ -44,22 +61,63 @@ security:
 
 governance:
   contributing:
-    path: "https://github.com/bootc-dev/bootc/blob/main/CONTRIBUTING.md"
+    path: "https://github.com/bootc-dev/community/blob/main/CONTRIBUTING.md"
+#  codeowners:
+#    path: ""
   code_of_conduct:
-    path: "https://github.com/bootc-dev/bootc/blob/main/CODE_OF_CONDUCT.md"
+    path: "https://github.com/bootc-dev/community/blob/main/CODE_OF_CONDUCT.md"
+  governance_doc:
+    path: "https://github.com/bootc-dev/community/blob/main/GOVERNANCE.md"
+  gitvote_config:
+    path: "https://github.com/bootc-dev/.github/blob/main/.gitvote.yml"
+  vendor_neutrality_statement:
+    path: "https://github.com/bootc-dev/community/blob/main/GOVERNANCE.md#values"
+  decision_making_process:
+    path: "https://github.com/bootc-dev/community/blob/main/GOVERNANCE.md#voting"
+#  roles_and_teams:
+#    path: ""
+#  sub_project_list:
+#    path: ""
+#  sub_project_docs:
+#    path: ""
+  contributor_ladder:
+    path: "https://github.com/bootc-dev/community/blob/main/GOVERNANCE.md#project-contributors"
+#  change_process:
+#    path: ""
+  comms_channels:
+    path: "https://github.com/bootc-dev/bootc#community-discussion"
+  community_calendar:
+    path: "https://zoom-lfx.platform.linuxfoundation.org/meetings/bootc?view=week"
+  contributor_guide:
+    path: "https://github.com/bootc-dev/community/blob/main/CONTRIBUTING.md"
+#  maintainer_lifecycle:
+#    onboarding_doc:
+#      path: ""
+#    progression_ladder:
+#      path: ""
+#    mentoring_program:
+#      - ""
+#    offboarding_policy:
+#      path: ""
 
 legal:
   license:
     path: "https://github.com/bootc-dev/bootc/blob/main/LICENSE-APACHE"
   identity_type:
-    has_dco: true # AUTO-DETECTED — please verify
-    has_cla: false # AUTO-DETECTED — please verify
+    has_dco: true
+    has_cla: false
     dco_url:
       path: "https://developercertificate.org/"
 
 documentation:
   readme:
     path: "https://github.com/bootc-dev/bootc/blob/main/README.md"
+#  support:
+#    path: ""
+  architecture:
+    path: "https://bootc.dev/bootc/bootc-images.html"
+#  api:
+#    path: ""
 
 landscape:
   category: "Runtime"
